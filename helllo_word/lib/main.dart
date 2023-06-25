@@ -24,17 +24,11 @@ class _InicioState extends State<Inicio> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Filas, Columnas y botones"),
+        title: const Text("Widgets"),
       ),
       body: Center(
-        child: MaterialButton(
-          child: const Text("hola mundo "),
-          onPressed: (){
-            var t = DateTime.now();
-            (t);
-          },
-        ),
-        )
+        child: Text("hola mundo"),
+      )
       );
   }
 }
