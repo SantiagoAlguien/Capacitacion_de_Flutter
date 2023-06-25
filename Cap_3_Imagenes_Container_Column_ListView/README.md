@@ -33,4 +33,4 @@ Estos son los widgets que se usaran en el capitulo
 
 - **ListView**
 
-    lo que significa este widget es que contiene lista de lista en su interior puede contener varios container 
+    lo que significa este widget es que contiene lista de lista en su interior puede contener varios container.
