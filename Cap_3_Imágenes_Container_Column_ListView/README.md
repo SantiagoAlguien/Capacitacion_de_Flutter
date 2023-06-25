@@ -1,2 +1,0 @@
-#  Imágenes, Container, Column, ListView 
-
