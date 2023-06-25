@@ -28,9 +28,10 @@ class _InicioState extends State<Inicio> {
       ),
       body: Center(
         child: MaterialButton(
-          child: Text("hola"),
+          child: const Text("hola"),
           onPressed: (){
-            print("hola");
+            var t = DateTime.now();
+            (t);
           },
         ),
         )
