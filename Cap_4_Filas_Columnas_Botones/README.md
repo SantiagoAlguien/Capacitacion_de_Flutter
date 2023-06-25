@@ -82,6 +82,28 @@ Abajo que recibe un mainAxisSize: MainAxisSize.min que lo que hace esto es reduc
 -**Context**
 El contexto es un elemento avanzado que representa toda la aplicacion no es lo mismo un contexto de un widget que el del scafolt princicpal 
 
-# Button
-    
 Nota: Las columnas se adaptan a lo que tengan adentro
+
+## Button
+
+Los botones son funciones en donde le damos clic estas van a ejecutar una tarea especifica aqui la estructura
+
+    class _InicioState extends State<Inicio> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Filas, Columnas y botones"),
+      ),
+      body: Center(
+        child: MaterialButton(
+          child: const Text("hola mundo "),
+          onPressed: (){
+            var t = DateTime.now();
+            (t);
+          },
+        ),
+        )
+      );
+      }
+    }
