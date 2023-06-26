@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:helllo_word/Pagina02.dart';
 
 void main() => runApp(const MiApp());
 
@@ -29,11 +30,20 @@ class _InicioState extends State<Inicio> {
       body: Center(
       child : Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: const <Widget>[
+        children:<Widget>[
           Text("Hola"
           ),
+          ElevatedButton( //La palabra RaisedBottun() quedo obsoleta 
+            child: Text("Ir a otra pagina "),
+            onPressed: ()=>{
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context)=>Pagina02())
+                )
+            }
+            )
         ],
-      ), //llamando a la funcion cuerpo
+      ), 
     ),
     );
   }

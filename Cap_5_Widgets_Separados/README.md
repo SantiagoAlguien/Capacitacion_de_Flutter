@@ -33,7 +33,7 @@ Primero vamos a crear una clase con la palabra reservada de "Widget" en la cual 
 
 ### -**Widget Nombre**
 
-Lo que sigue es la creacion de la clase de un widget de un contenedor de nombre y se va que tiene un estilo como se ve representado 
+Lo que sigue es la creacion de la clase de un widget de un contenedor de nombre y se ve que tiene un estilo como se ve representado 
     
     Widget nombre(){ //Clase que se crea con Widget 
     return const Text("Sing in", style: TextStyle( // Un texto que contiene Sing in y el cual le ponemos estilo con style: TextStyle()
@@ -45,7 +45,7 @@ Lo que sigue es la creacion de la clase de un widget de un contenedor de nombre 
 
 ![img](Widget-nombre.png)
 
-### -**Widget Camposuario**
+### -**Widget CampoUsuario**
 
 Seguimos con la creacion de una funcion de  campo de usuario donde se insertara texto y se hace de la siguiente forma 
 
@@ -98,7 +98,7 @@ Insertaremos un boton con la reservada de MaterialButton que es una palabra rese
         );
     }
 
-![img](Campo-botonEntrar.png)
+![img](Resultado.png)
 
 
 ### Resultado
