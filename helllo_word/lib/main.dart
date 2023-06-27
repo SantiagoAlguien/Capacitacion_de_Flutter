@@ -22,6 +22,8 @@ class Inicio extends StatefulWidget {
 }
 
 class _InicioState extends State<Inicio> {
+
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,16 +34,27 @@ class _InicioState extends State<Inicio> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ElevatedButton(
-              child: Text("Mostrar"),
-              onPressed: () {
-                mostrarAlerta(context);
-              },
+            Container(
+              child: ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor:MaterialStateProperty.all<Color>(Color.fromARGB(255, 255, 0, 0)),
+                ) ,
+                child: Text(
+                  "Suscribirme a este canal",
+                  style: TextStyle(fontSize: 20),
+                  
+                ),
+                onPressed: () {
+                  mostrarAlerta(context);
+                },
+              ),
             ),
             SizedBox(
               height: 100,
             ),
-            Text("si"),
+            Text("No susbcrito",
+            style: TextStyle(fontSize: 20),
+            ),
           ],
         ),
       ),
@@ -52,13 +65,26 @@ class _InicioState extends State<Inicio> {
 void mostrarAlerta(BuildContext context) {
   //Funcion que va a contener nuestra alerta
   showDialog(
-    barrierDismissible: true,
-    context: context,
-    builder: (context){
-      return AlertDialog(
-        title: Text("hola"),
-        content: Text("¿Como estas ?"),        
-      );
-    }
-  );
+      barrierDismissible: true,
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: Text("Suscribirse"),
+          content: Text("¿Estas seguro ?"),
+          actions: [
+            TextButton(
+                onPressed: () {
+                  print("No");
+                  Navigator.pop(context);
+                },
+                child: Text("No quiero")),
+            TextButton(
+                onPressed: () {
+                  print("Si");
+                  Navigator.pop(context);
+                },
+                child: Text("Si quiero")),
+          ],
+        );
+      });
 }
