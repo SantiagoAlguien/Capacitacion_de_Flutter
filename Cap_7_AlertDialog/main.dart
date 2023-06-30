@@ -51,7 +51,7 @@ class _InicioState extends State<Inicio> {
                       builder: (context) {
                         return AlertDialog(
                           title: Text(
-                            _subscrito ?
+                            _subscrito ? //Lo que hacemos es una eleccion de que si false imprima "Cancelar suscribirse": si es true "Suscribirse"
                             "Cancelar suscribirse":
                             "Suscribirse"
                             ),
