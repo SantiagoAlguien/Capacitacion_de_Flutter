@@ -18,10 +18,24 @@ Despues seguimos a la seccion de "Installing " que ahi nos dice en la depencia q
 
 ## Confugarion pubspec.yaml
 
-Ya con el paquete copiado nos dirijimos al proyecto de flutter en la carpeta "pubspec.yaml" en donde pegaremoos el paquete en la seccion de "dependencias" de esta forma 
+Ya con el paquete copiado nos dirijimos al proyecto de flutter en la carpeta "pubspec.yaml" en donde pegaremos el paquete en la seccion de "dependencias" de esta forma 
 
     dependencies:
-    flutter:
-        sdk: flutter 
-    cupertino_icons: ^1.0.2
-      http: ^1.1.0 //Paquete que copiamos 
+      flutter:
+        sdk: flutter
+      cupertino_icons: ^1.0.2
+      http: ^1.1.0 //paquete que copiamos 
+
+despues de eso presionamos ctrl + s para guardar los cambios verificando que tengamos la ultima version de flutter 
+
+## Como consumir una API ya creada
+
+Nos dirijiemos a la pagina de [GIPHY](https://developers.giphy.com/) con una cuenta logeada y damos clic en "Create an Appp" y nos aparece esta ventana 
+
+![img](Giphy.png)
+
+selecionando la API se nos abre otra ventana para poner los datos de nuestra API
+
+![img](APIGiphy.png)
+
+Despues podemos visualizar la API con el API Key

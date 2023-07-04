@@ -6,7 +6,6 @@ class MiApp extends StatefulWidget {
 }
 
 class _MiAppState extends State<MiApp> {
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -14,9 +13,9 @@ class _MiAppState extends State<MiApp> {
         title: "Consumiendo un API REST ( Future / http )",
         home: Scaffold(
           appBar: AppBar(
-            title: Text("Consumiendo un API REST ( Future / http )"),
+            title: const Text("Consumiendo un API REST ( Future / http )"),
           ),
-          body:Center(child: Text("Hola"),)
+          body:const Center(child: Text("Hola"),)
         ),
       ),
     );
