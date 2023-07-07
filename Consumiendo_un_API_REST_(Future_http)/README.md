@@ -48,7 +48,7 @@ Seguido de esto vamos a la seccion de API Explorer y escogemos que tipo de endpo
 
 el objecto que vemos es la api 
 
-## Comeansando 
+## Comensando 
 
 Creamos una llamamda gif que contiene el nombre de los gits y la url con su constructor 
 
@@ -115,9 +115,44 @@ Para ejecutar nuestro future usaremos la funcion propia de flutter de initState 
 ## Configurando if 
 
 Seguimos con el if estableciendo un Strig del body que lo imprima en utf8 esto facilita la lectura de la API, seguido es combertir el body que es un string en un objeto JSON para que lea mejor la lectura .
-if(response.statusCode == 200){
+  
+  if(response.statusCode == 200){
       String body = utf8.decode(response.bodyBytes);
 
     }else{
       throw Exception("Fallo la conexion");
     }
+
+  seguido de esto convertimos el body que es un string a un objeto Json ais 
+
+    final jsonData = jsonDecode(body);
+
+  cuando se usa "jsonDecode" se debe importar el paquete esto se hace automaticamente luego seguimos llamando la lista de gifs
+
+    List<Gif> gifs = [];
+
+  para navegar en un objecto Json en flutter y obtener su informacion se usa 
+
+    print(JsonData ["Data"][0]["type"])
+
+  para que nos imprima la informacion de la api que estamos consultando 
+
+  ## For 
+
+Despues nesecitamos hacer un recorrido de la lista para esto se puede con un for que en sus parametros estableceres los recorridos por el JsonData y establecemos que recorra la api de gifs, seguido dentro de las {} le decimos que agrege gifs.add llamando al objecto gifs estableciendo que el primer parametro es el titulo y el segundo la url de la imagen como se observa.
+
+      for (var item in jsonData["data"]) {
+        gifs.add(
+          Gif(item["title"], item["images"]["downsized"]["url"]));
+      }
+
+al final ponemos que nor retorne return gifs; y ya ahi terminaria el future de la lista de gifs
+
+por ultimo vamos iniState y agregamos que _listadoGifs = _getGifs(); como se puede ver 
+
+  void initState() { //Es una funcion que se ejecuta cuando se abre una ventana 
+    super.initState();
+    _listadoGifs = _getGifs();
+  }
+
+# Fin de parte 1
