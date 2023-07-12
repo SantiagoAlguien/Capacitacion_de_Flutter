@@ -50,7 +50,7 @@ el objecto que vemos es la api
 
 ## Comensando 
 
-Creamos una llamamda gif que contiene el nombre de los gits y la url con su constructor 
+Creamos una Clase gif que contiene el nombre de los gits y la url con su constructor 
 
     class Gif {
     
@@ -156,3 +156,75 @@ por ultimo vamos iniState y agregamos que _listadoGifs = _getGifs(); como se pue
   }
 
 # Fin de parte 1
+
+# Inciio de Parte 02
+
+En el siguiente video se mostrara mostrar como mostrar los widgets que exportamos de nuestra API
+
+se retorna todos los temas que se vio en el aterior video  ya esta gran parte de la explicacion en las notas 
+
+bueno con esto seguimos con un nuevo Widget para llamar al future 
+
+## FutureBuilder
+
+Este es un widget de futter que va en el body del widget principal este widget pide 2 cosas el "future" y "builder"
+
+**future**
+
+Esto lo que hace es llamar a una varibale
+
+**builder**
+
+Es un constructor que nos pide un conxteto en los () en donde determinamos la convencion de la constreucion la conecion de los paraentecis lo que hace es tomar las varibales del future
+
+asi quedario el codigo
+
+    body: FutureBuilder( // El Widget
+            future: _getGifs(), //El future que consultamos 
+            builder: (context,snapshot ){ //el toma la informacion que devuelve el futuew 
+              if (snapshot.hasData) { //si tiene informacion que la devuelva
+                return GridView.count( //Esto es lo que returna si tiene informacion
+                  crossAxisCount: 2,
+                  children: _listGifs(snapshot.data), //retorna una funcion que contiene la lista de gifs que se llama afuera
+                );
+              }else if (snapshot.hasError){ //Si no tiene informacion que devuelva la informacion
+                print(snapshot.hasError);
+                return Text("Error"); //Retorna informaicon 
+              }
+              return Center( //Este es el return por defecto del if 
+                child: CircularProgressIndicator(), //es un hijo que trae un cirvculo
+              );
+            },
+          )
+
+
+## Funcion traer gifs
+
+Esta funcion esta en el widget principal y los que se ve es trae la lista de gifs para ser declarada en el "FutureBuilder"
+
+
+    List<Widget> _listGifs(data){ //Funcion de la   lista 
+    List<Widget> gifs = []; //cosntructor
+
+    for (var gif in data) { // el for que hace el   recorido de la lista de los gifs 
+    print(gif.url);
+    gifs.add(Card(child: Column( 
+      children: [
+        Expanded(child: Image.network(gif.url?? //el  doble ?? es para permitir traer datos en nulo ,fit: BoxFit.fill)), //En caso de ser null  mandar un string vacio asi ??""
+
+      ],
+    ))
+    );
+    }
+    return gifs;
+    }
+
+
+Padding(padding: const EdgeInsets.all(8.0),
+        child: Text(gif.name),
+      ),
+
+
+# Fin de la parte 1 y 2 de Consumiendo un API REST ( Future / http )
+
+[Archivo del video](Consumiendo_un_API_REST_(Future_http)\lib)
