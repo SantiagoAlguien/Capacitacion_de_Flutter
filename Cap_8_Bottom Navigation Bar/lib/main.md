@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'Pages/Home.dart';
-import 'Pages/PaginaUsers.dart';
+import 'Pages/Home.md';
+import 'Pages/PaginaUsers.md';
 
 void main() => runApp( MiApp());
 class MiApp extends StatefulWidget { 
