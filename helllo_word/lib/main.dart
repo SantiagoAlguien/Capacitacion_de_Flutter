@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:card_swiper/card_swiper.dart';
 
 void main() => runApp(const MiApp());
 
@@ -32,7 +33,27 @@ class _InicioState extends State<Inicio> {
     return Scaffold(
       appBar: AppBar(title: const Text("Carrusel de imágenes"),
       ), //Barra superior de navegacion 
-      body:Center(child: Text("HOLA"),)
+      body:Container(child: _wiper(),)
+    );
+  }
+  Widget _wiper (){
+    List<String> imagenes = [
+      "https://cdn.pixabay.com/photo/2017/08/30/12/45/girl-2696947_1280.jpg",
+      "https://cdn.pixabay.com/photo/2017/08/30/12/45/girl-2696947_1280.jpg",
+      "https://cdn.pixabay.com/photo/2017/08/30/12/45/girl-2696947_1280.jpg",
+      "https://cdn.pixabay.com/photo/2017/08/30/12/45/girl-2696947_1280.jpg"
+    ];
+  return Container(
+    width: 500,
+    height: 600,
+    child: Swiper(
+        itemBuilder: (BuildContext context,int index){
+          return new Image.network(imagenes[index],fit: BoxFit.cover,);
+        },
+        itemCount: imagenes.length,
+        pagination: new SwiperPagination(),
+        control: new SwiperControl(),
+      ),
     );
   }
 }
