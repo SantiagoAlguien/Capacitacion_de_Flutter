@@ -30,11 +30,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  card_swiper: ^3.0.1
+  
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  shared_preferences: ^2.2.0
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
