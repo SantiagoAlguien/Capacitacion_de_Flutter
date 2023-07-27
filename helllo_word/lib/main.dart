@@ -30,13 +30,12 @@ class _InicioState extends State<Inicio> {
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: AppBar(title: const Text("enviar parámetros a un Widget"),
       ), //Barra superior de navegacion 
-      body:Center(
-        child: Text("Hola mundo")
+      body:Column(
       )
     );
   }
-
  }
