@@ -12,3 +12,8 @@ Para crear un nuevo proyecto en firebase toca crear un nuevo archivo de flutter 
 
 ![img](Captura%20de%20pantalla%202023-08-10%20172941.png)
 
+![img](Captura%20de%20pantalla%202023-08-14%20172717.png)
+
+
+toca saber leer los errores
+

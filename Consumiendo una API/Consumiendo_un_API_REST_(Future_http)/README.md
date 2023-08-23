@@ -73,32 +73,32 @@ El future lo que hace es determninnar el tiempo  de espera de una peticion hasta
 
 los future nesecitan una variable que contenga un future y se haria asi 
 
-  Future<List<Gif>>? _listadoGifs;
+    Future<List<Gif>>? _listadoGifs;
 
 este future recibe un listado de gifs y tiene el nombre de _listadoGifs para recibir estos valores toca hacer una funcion que los devuelva y se compone asi:
 
-  Future<List<Gif>> _getGifs(){}
+    Future<List<Gif>> _getGifs(){}
 
 dentro de esta funcion construiremos los parametros que es un response que da a igual a un parametro http de tipo get que den:
 
-  Future<List<Gif>> _getGifs() async { //funcion ansincrona 
-    final response = await http.get(Uri.parse("https://api.giphy.com/v1/gifs/trending?api_key=xvLhrjAxuzR0R0joya1TXZFGUGzBYKF3&limit=10&offset=0&rating=g&bundle=messaging_non_clips")); //Para llamar la url nesecitamos una clase Uri que requiere un parse dentro de las ()
+    Future<List<Gif>> _getGifs() async { //funcion ansincrona 
+      final response = await http.get(Uri.parse("https://api.giphy.com/v1/gifs/trending?  api_key=xvLhrjAxuzR0R0joya1TXZFGUGzBYKF3&limit=10&offset=0&rating=g&  bundle=messaging_non_clips")); //Para llamar la url nesecitamos una clase Uri que requiere un   parse dentro de las ()
 
-    await// solo se puede utilizar en una funcion ansincrona 
-  }
+      await// solo se puede utilizar en una funcion ansincrona 
+    }
 
 para que este parametro funcione toca hacer una importacion de un paquete de dart que es
 
-  import 'package:http/http.dart' as http; //Nombre que le asignamos al paquete
+    import 'package:http/http.dart' as http; //Nombre que le asignamos al paquete
 
 Luego esteblecemos parametros de if y else para validar la conexion a la API
 
-    if(response.statusCode == 200){
+      if(response.statusCode == 200){
       print(response.body); //imprime informacion en caso de que funcione
 
-    }else{
+      }else{
       throw Exception("Fallo la conexion");
-    }
+      }
   
 lo que hace el if es que si hay conexion 200 si pase la validacion de conexion del future sino el else reportara un fallo de conexion.
 
