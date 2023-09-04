@@ -4,7 +4,6 @@ void main() => runApp(const MiApp());
 
 class MiApp extends StatefulWidget {
   const MiApp({super.key});
-
   @override
   State<MiApp> createState() => _MiAppState();
 }
@@ -30,7 +29,8 @@ class _InicioState extends State<Inicio> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("SplashScreen"),
+      
+      appBar: AppBar(title: const Text("Cambiar el icono de tu App en Flutter"),
       ), //Barra superior de navegacion 
       body:Center(
         child: Container(
