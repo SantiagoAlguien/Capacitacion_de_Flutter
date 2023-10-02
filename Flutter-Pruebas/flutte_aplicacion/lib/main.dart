@@ -1,7 +1,7 @@
+import 'package:flutte_aplicacion/services/notification_service.dart';
 import 'package:flutter/material.dart';
-import 'package:flutte_aplicacion/widgets/formulario_pago.dart';
 
-void main() => runApp( const MiApp());
+ 
 class MiApp extends StatefulWidget {
   const MiApp({super.key});
  
@@ -18,10 +18,29 @@ class _MiAppState extends State<MiApp> {
       title: "Pruebas flutter",
       home: Scaffold(
         appBar: AppBar(
-          title: const Text("Pago con tarjeta"),
+          title: const Text("Notificaciones Locales"),
         ),
-        body: FromCard()
+        body: PaginaPrincipal()
       )
+    );
+  }
+}
+
+class PaginaPrincipal extends StatelessWidget {  
+  
+  const PaginaPrincipal({Key? key}):super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: MaterialButton(
+      color: Color.fromARGB(255, 12, 125, 255),  
+      onPressed: () {
+        mostrarNotificacion();  
+        //Aqui enviamos la notificacion
+      },
+      child: const Text("Hola mundo"),
+      ),
     );
   }
 }
