@@ -52,3 +52,6 @@ despues para hacer la logica del envio de las notificaciones en la seccion de no
 
       await flutterLocalNotificationsPlugin.show(1, 'Titulo de  la notficacion', 'Esta es una notificacion de prueba para mostrar en el canal', notificationDetails); //Datos de las notificaciones
     }
+
+
+    
