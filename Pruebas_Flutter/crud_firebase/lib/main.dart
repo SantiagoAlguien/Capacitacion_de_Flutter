@@ -1,7 +1,7 @@
+import 'package:crud_firebase/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
 //importaciones de firebase
-import 'package:firebase_core/firebase_core.dart';
 
 Future<void> main() async {
   runApp(MyApp());
@@ -18,12 +18,8 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false, // método para eliminar la palabra debug arriba
-      title: "Pruebas flutter",
-      initialRoute: '/',
-      routes: <String, WidgetBuilder> {
-        
-      },
+      title: "Material App",
+      home: HomePage(),
     );
   }
 }
