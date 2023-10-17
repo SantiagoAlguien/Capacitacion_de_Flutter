@@ -1,26 +1,65 @@
 {
   "project_info": {
-    "project_number": "120639272635",
-    "project_id": "flutter-test-d8806",
-    "storage_bucket": "flutter-test-d8806.appspot.com"
+    "project_number": "163901642130",
+    "project_id": "test-firebase-f1a83",
+    "storage_bucket": "test-firebase-f1a83.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:120639272635:android:d21134b2ee2ea212e41b9e",
+        "mobilesdk_app_id": "1:163901642130:android:c49bbf57fd315e44c15d4b",
         "android_client_info": {
           "package_name": "com.santiago.crud_firebase"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "163901642130-bp4ul982jh7l8i3p4c1n96fevlkr078g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
-          "current_key": "AIzaSyD9sZnP06p-KMinzn--hHsoQlxF7AjrXy0"
+          "current_key": "AIzaSyDsUvolBykV_rje8mHQTjAcxmCFcOlkYdg"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "163901642130-bp4ul982jh7l8i3p4c1n96fevlkr078g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:163901642130:android:967dabea95b2657dc15d4b",
+        "android_client_info": {
+          "package_name": "com.santiago.testfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "163901642130-bp4ul982jh7l8i3p4c1n96fevlkr078g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsUvolBykV_rje8mHQTjAcxmCFcOlkYdg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "163901642130-bp4ul982jh7l8i3p4c1n96fevlkr078g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
